@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+    <h2>"{{ query }}" боюнча издөө жыйынтыктары:</h2>
+    <div class="row">
+        {% for item in results %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ item.image.url }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p>{{ item.description|truncatewords:10 }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>Кечиресиз, эч нерсе табылган жок.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
