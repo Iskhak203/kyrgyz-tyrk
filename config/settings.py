@@ -80,12 +80,13 @@ USE_L10N = True
 USE_TZ = True
 
 # Тилдердин тизмеси
-LANGUAGES = (
+LANGUAGES = [
     ('ky', _('Kyrgyz')),
     ('ru', _('Russian')),
     ('tr', _('Turkish')),
-)
+]
 
+LOGOUT_REDIRECT_URL = '/'
 # Котормо файлдары сактала турган папка
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale/'),
