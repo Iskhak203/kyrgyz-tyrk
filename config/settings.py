@@ -9,6 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ej-c33@2d798!p*q9rt)zx8v*-=aawj-e1f(917*(t!)%pxike'
 DEBUG = True
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/'  # Логинден кийин башкы бетке өтөт
+LOGOUT_REDIRECT_URL = 'login' # Чыккандан кийин башкы бетке өтөт
 
 # 2. Тиркемелерди кошуу
 INSTALLED_APPS = [
